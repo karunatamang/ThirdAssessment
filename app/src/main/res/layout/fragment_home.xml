@@ -6,7 +6,7 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/anime_recycler"
+        android:id="@+id/user_recycler"
         android:layout_width="391dp"
         android:layout_height="394dp"
         android:layout_marginTop="44dp"
@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Character Detail"
+        android:text="User Detail"
         android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

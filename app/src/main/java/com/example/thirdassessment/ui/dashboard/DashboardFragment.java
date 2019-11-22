@@ -62,7 +62,6 @@ public class DashboardFragment extends Fragment {
                     public void onCheckedChanged(RadioGroup radioGroup, int i) {
                         if(i==R.id.rb_male){
                             ugender="Male";
-
                         }
                         if(i==R.id.rb_female){
                             ugender="Female";
