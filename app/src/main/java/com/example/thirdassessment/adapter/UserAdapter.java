@@ -16,9 +16,9 @@ import com.example.thirdassessment.model.Users;
 import java.util.List;
 
 public class UserAdapter extends RecyclerView.Adapter<UserAdapter.myHolder> {
-    List<Users> characters;
+    List<Users> charactersList;
     public UserAdapter(List<Users> characters){
-        this.characters= characters;
+        this.charactersList= characters;
     }
     public myHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.user_details,parent,false);
@@ -31,7 +31,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.myHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull myHolder holder, final int position) {
-        final Users character=characters.get(position);
+        final Users character=charactersList.get(position);
         holder.name.setText(character.getName());
         holder.age.setText(character.getAge());
         holder.address.setText(character.getAddress());
@@ -50,7 +50,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.myHolder> {
         holder.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                characters.remove(characters);
+                charactersList.remove(character);
                 notifyItemRemoved(position);
             }
         });
@@ -60,7 +60,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.myHolder> {
     @Override
     public int getItemCount() {
 
-        return characters.size();
+        return charactersList.size();
     }
 
     public class myHolder extends RecyclerView.ViewHolder {

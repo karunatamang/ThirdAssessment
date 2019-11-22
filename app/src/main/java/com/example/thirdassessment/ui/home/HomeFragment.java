@@ -29,7 +29,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
-        recyclerView  = root.findViewById(R.id.anime_recycler);
+        recyclerView  = root.findViewById(R.id.user_recycler);
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

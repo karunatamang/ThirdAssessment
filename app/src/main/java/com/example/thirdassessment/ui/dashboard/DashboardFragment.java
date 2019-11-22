@@ -82,6 +82,7 @@ public class DashboardFragment extends Fragment {
                         uaddress=Address.getText().toString();
                         if (validate()) {
                             characters.add(new Users(uage, uname, uaddress, ugender));
+                            Toast.makeText(getContext(), "User Detail sucessfully added", Toast.LENGTH_SHORT).show();
 
                             Name.setText(null);
                             Age.setText(null);
